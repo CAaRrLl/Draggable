@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>拖拽</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='initial-scale=1,width=device-width' />
+        <style type='text/css'>
+            .my-ul {
+                list-style: none;
+                padding: 0;
+                position: relative;
+            }
+            .my-ul li {
+                width: 200px;
+                height: 100px;
+            }
+        </style>
+        <script type='text/javascript' src='draggable.js'></script>
+    </head>
+    <body>
+        <div id='container'>
+            <ul class='my-ul'>
+                <li id='target_1'>鬼武者</li>
+                <li id='target_2'>黑暗之魂</li>
+            </ul>
+        </div>
+        <script type='text/javascript'>
+            var id1 = $draggable('#target_1', {
+                mode: 'all',
+                limit: {top:0, left:0, width:200, height:100}
+            });
+            var id2 = $draggable('#target_2', {
+                mode: 'all'
+            });
+        </script>
+    </body>
+</html>
