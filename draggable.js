@@ -420,7 +420,7 @@ $draggable(
     }
 
     Draggable.prototype.transformSource = function() {
-        this.source.className = 'draggable-source';
+        this.source.className += ' draggable-source';
 
         var width = this.source.offsetWidth;
         var height = this.source.offsetHeight;
