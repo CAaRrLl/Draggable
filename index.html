@@ -5,14 +5,45 @@
         <meta charset='utf-8'>
         <meta name='viewport' content='initial-scale=1,width=device-width' />
         <style type='text/css'>
+            #container {
+                position: relative;
+            }
             .my-ul {
                 list-style: none;
                 padding: 0;
-                position: relative;
             }
             .my-ul li {
-                width: 200px;
+                width: 100px;
+                height: 50px;
+            }
+            #target_3 {
+                width: 100px;
                 height: 100px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rebeccapurple;
+            }
+            #_target1 {
+                width:200px;
+                height: 150px;
+                background-color: antiquewhite;
+                margin-left: 200px;
+            }
+            #_target2 {
+                width:160px;
+                height: 150px;
+                background-color: antiquewhite;
+                margin-left: 450px;
+                margin-top: 100px;
+            }
+            #_target3 {
+                width:300px;
+                background-color: antiquewhite;
+                height: 180px;   
+                margin-left: 300px;
+                margin-top: 50px;
             }
         </style>
         <script type='text/javascript' src='draggable.js'></script>
@@ -23,6 +54,10 @@
                 <li id='target_1'>鬼武者</li>
                 <li id='target_2'>黑暗之魂</li>
             </ul>
+            <div id='target_3'>拖拽我</div>
+            <div id='_target1'></div>
+            <div id='_target2'></div>
+            <div id='_target3'></div>
         </div>
         <script type='text/javascript'>
             var id1 = $draggable('#target_1', {
@@ -30,7 +65,13 @@
                 limit: {top:0, left:0, width:200, height:100}
             });
             var id2 = $draggable('#target_2', {
-                mode: 'all'
+                mode: 'all',
+                limit: {top:0, left:0, width:600, height:400}
+            });
+            var id3 = $draggable('#target_3', {
+                mode: 'once',
+                targets: {'#_target1':{top:20, left: 30}, '#_target2':{}, '#_target3':{}},
+                limit: {top:0, left:0, width:700, height:500}
             });
         </script>
     </body>
