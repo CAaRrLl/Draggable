@@ -292,10 +292,10 @@ $draggable(
                 width = this.source.offsetWidth, 
                 height = this.source.offsetHeight;
             
-            var sourceCenterX = top + width / 2,
-                sourceCenterY = left + height / 2,
-                targetCenterX = tTop + tWidth / 2,
-                targetCenterY = tLeft + tHeight / 2;
+            var sourceCenterX = left + width / 2,
+                sourceCenterY = top + height / 2,
+                targetCenterX = tLeft + tWidth / 2,
+                targetCenterY = tTop + tHeight / 2;
 
             var xDistance = Math.abs(sourceCenterX - targetCenterX),
                 yDistance = Math.abs(sourceCenterY - targetCenterY);
